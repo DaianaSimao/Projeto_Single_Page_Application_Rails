@@ -1,0 +1,24 @@
+<div id="<%= dom_id book %>">
+  <div class="container-fluid text-center bg-book rounded">
+      <div class="row">
+          <div class="col-6 col-sm-3"><strong>Vinculo: </strong>
+          <%=book.vinculo%></div>
+          <div class="col-6 col-sm-3"><strong>Titulo: </strong>
+              <%= book.titulo%></div>
+          <div class="col-6 col-sm-3"><strong>Autor: 
+              </strong><%= book.autor%></div>
+          <hr class="hr1">
+          <div class="col-6 col-sm-3"><strong>Edição: </strong>
+              <%= book.edicao%></div>
+          <div class="col-6 col-sm-3"><strong>Issn: </strong>
+              <%= book.issn%></div>
+          <div class="col-6 col-sm-3"><strong>Ano: </strong>
+              <%= book.ano%></div>
+          <div class="col-6 col-sm-3"><strong>Editora: </strong>
+              <%= book.editora%></div>
+          <hr class="hr1">
+      </div>
+      <%= button_to 'Excluir livro', book, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja exluir esse livro?" } }, class: "btn btn-destroy" %>
+      <hr>
+  </div>
+</div>

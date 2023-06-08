@@ -1,0 +1,47 @@
+<%= form_with(model: book) do |form| %>
+  <form id="form">
+    <div>
+      <div class="row">
+        <div class="col">
+          <h4><%= form.label "Selecione o vinculo" %></h4>
+          <%= form.select :vinculo,["Docente", "Dicente", "Tecnico"], {prompt: true}, class: "form-select", id:"vinculo" %><br>
+        </div>
+        <div class="col">
+          <h4><%= form.label "Titulo" %></h4>
+          <%= form.text_field :tituto,  placeholder: "Digite o titulo do livro", class: "form-control", id:"titulo"%><br>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <h4><%= form.label "Autor" %></h4>
+          <%= form.text_field :autor, placeholder: "Digite o autor do livro", class: "form-control", id:"autor"%><br>
+        </div>
+        <div class="col">
+          <h4><%= form.label "Edição" %></h4>
+          <%= form.number_field :edicao,  placeholder: "Digite a edição do livro", class: "form-control", id:"edicao" %><br>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" >
+          <h4><%= form.label "ISSN" %></h4>
+          <%= form.text_field :issn, placeholder: "Digite o ISSN do livro", class: "form-control", id:"issn"%><br>
+        </div>
+
+        <div class="col" >
+          <h4><%= form.label "Ano" %></h4>
+          <%= form.text_field :ano, placeholder: "Digite o ano de publicação do livro", class: "form-control", id:"ano"%><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6" >
+          <h4><%= form.label "Editora" %></h4>
+          <%= form.text_field :editora, placeholder: "Digite o editora do livro", class: "form-control", id:"editora" %><br>
+        </div>
+      </div><br>
+        <%= form.submit class: "btn btn-block", id:"button"%>
+    </div>
+  </form><br>
+<% end %>

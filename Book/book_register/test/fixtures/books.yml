@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vinculo: MyString
+  titulo: MyString
+  autor: MyString
+  edicao: 1
+  issn: 1
+  ano: 1
+  editora: MyString
+
+two:
+  vinculo: MyString
+  titulo: MyString
+  autor: MyString
+  edicao: 1
+  issn: 1
+  ano: 1
+  editora: MyString

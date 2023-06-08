@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <h1>Solicitações de Livros</h1><br>
+  <%= render "books/form",book: Book.new %>
+  <br><br>
+
+  <div class="container-fluid text-center">
+    <%# image_tag 'book'%>
+    <h1>Tabela de Solicitação</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Vinculo</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Edição</th>
+          <th scope="col">Issn</th>
+          <th scope="col">Ano</th>
+          <th scope="col">Editora</th>
+        </tr>
+      </thead>
+      <% @books.each do |book| %>
+        <tbody>
+          <tr>
+            <td><%= book.vinculo%></td>
+            <td><%= book.titulo%></td>
+            <td><%= book.autor%></td>
+            <td><%= book.edicao%></td>
+            <td><%= book.issn%></td>
+            <td><%= book.ano%></td>
+            <td><%= book.editora%></td>
+            <td><%= button_to 'Excluir livro', book, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja exluir esse livro?" } }, class: "btn btn-destroy" %></td>
+          </tr>
+        </tbody>
+      <%end%>
+    </table>
+  </div>
+</div>
