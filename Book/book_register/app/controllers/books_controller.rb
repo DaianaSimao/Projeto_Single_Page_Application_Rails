@@ -21,7 +21,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to books_path, notice: "Livro Solicitado com sucesso!" 
     else
-      redirect_to books_path, status: :unprocessable_entity
+      redirect_to books_path, alert:"#{@book.errors.full_messages.to_sentence}"
     end
   end
   # DELETE /books/1 or /books/1.json
