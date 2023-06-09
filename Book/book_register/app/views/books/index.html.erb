@@ -1,12 +1,18 @@
 <div class="container-fluid">
-  <h1>Solicitações de Livros</h1><br>
+  <div class="col-md-10 offset-md-4">
+    <h1>Solicitações de Livros</h1><br>
+  </div>
   <%= render "books/form",book: Book.new %>
   <br><br>
 
-  <div class="container-fluid text-center">
-    <%# image_tag 'book'%>
+  <div class="col-md-10 offset-md-6">
+    <%= image_tag 'book', width: 50, height: 46%>
+  </div>
+  <div class="col-md-10 offset-md-4">
     <h1>Tabela de Solicitação</h1>
-    <table class="table">
+  </div>
+  <div class="col-md-10 offset-md-1">
+    <table class="table table-success table-striped">
       <thead>
         <tr>
           <th scope="col">Vinculo</th>
@@ -16,6 +22,7 @@
           <th scope="col">Issn</th>
           <th scope="col">Ano</th>
           <th scope="col">Editora</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <% @books.each do |book| %>
@@ -28,7 +35,7 @@
             <td><%= book.issn%></td>
             <td><%= book.ano%></td>
             <td><%= book.editora%></td>
-            <td><%= button_to 'Excluir livro', book, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja exluir esse livro?" } }, class: "btn btn-destroy" %></td>
+            <td><%= button_to 'Excluir', book, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja exluir esse livro?" } }, class: "btn btn-destroy" %></td>
           </tr>
         </tbody>
       <%end%>

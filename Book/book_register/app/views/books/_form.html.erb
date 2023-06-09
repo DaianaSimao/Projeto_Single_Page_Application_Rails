@@ -1,6 +1,5 @@
-<%= form_with(model: book) do |form| %>
-  <form id="form">
-    <div>
+<%= form_with(model: book)  do |form|%>
+    <div class="col-md-10 offset-md-1">
       <div class="row">
         <div class="col">
           <h4><%= form.label "Selecione o vinculo" %></h4>
@@ -8,7 +7,7 @@
         </div>
         <div class="col">
           <h4><%= form.label "Titulo" %></h4>
-          <%= form.text_field :tituto,  placeholder: "Digite o titulo do livro", class: "form-control", id:"titulo"%><br>
+          <%= form.text_field :titulo,  placeholder: "Digite o titulo do livro", class: "form-control", id:"titulo"%><br>
         </div>
       </div>
       

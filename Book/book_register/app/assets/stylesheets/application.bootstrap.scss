@@ -1,2 +1,49 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+.btn-block{
+	border: 1px solid #f8f7f9;
+	background: rgb(63,171,251);
+	border-radius: 10px;
+    color: white;
+}
+
+.bg-fundo{
+	background: linear-gradient(90deg, rgba(63,171,251,1) 17%, rgba(106,70,252,1) 100%);
+    color: #000 ;
+}
+
+.btn-destroy{
+	background: linear-gradient(90deg, rgba(251,100,63,1) 17%, rgba(252,70,70,1) 100%);
+    color: white;
+	
+}
+
+.container-my{
+	position: absolute;
+	width: 975px;
+	height: 435px;
+	left: 165px;
+	top: 150px;
+
+}
+
+
+
+
+hr {
+	margin: 20px 0;
+}
+
+.hr1 {
+	border: 0;
+	border-top: 1px solid #46a8fc;
+}
+
+.bg-book{
+	background: linear-gradient(90deg, rgba(192,216,236,1) 17%, rgba(228,233,237,1) 100%);
+}
